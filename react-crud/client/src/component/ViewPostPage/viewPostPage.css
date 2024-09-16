@@ -1,0 +1,22 @@
+.view-product-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .product{
+        display: flex;
+        padding: 1rem;
+        background-color: var(--fourth-color);
+        border-radius: 15px;
+        margin-top: 2rem;
+        gap: 1rem;
+        width: 80%;
+
+        .product-detail{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            line-height: 3rem;
+        }
+    }
+}
