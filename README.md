@@ -39,16 +39,21 @@ Once both the client and server are set up, you will be able to access the websi
 [CreatePostPage]
 
 - Can create product
+- Click button to back homepage
 
 [EditPostPage]
 
 - Can edit product
+- Click button to back homepage
 
 [ViewPostPage]
 
 - Can view product detail
+- Click button to back homepage
 
 
 ##
 
 **Server side** was created by Techup Thailand (React React Router Assignment)
+
+This project is **responsive**
