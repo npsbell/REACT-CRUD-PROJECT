@@ -69,3 +69,9 @@
     }
   }
 }
+
+@media (max-width: 1045px) {
+  #input-container {
+    width: 90%;
+  }
+}

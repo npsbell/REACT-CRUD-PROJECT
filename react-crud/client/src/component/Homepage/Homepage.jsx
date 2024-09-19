@@ -16,10 +16,10 @@ const Homepage = () => {
       setIsError(false);
       const result = await axios("http://localhost:4001/products");
       setProduct(result.data.data);
-      setIsLoading(false)
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
-      alert("Fail to fetch product data!")
+      alert("Fail to fetch product data!");
       setIsLoading(false);
       setIsError(true);
     }
@@ -31,14 +31,14 @@ const Homepage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4001/products/${id}`)
-      const updateProduct = product.filter((item) => item.id !== id)
-      setProduct(updateProduct)
-      alert("Delete Success!")
+      await axios.delete(`http://localhost:4001/products/${id}`);
+      const updateProduct = product.filter((item) => item.id !== id);
+      setProduct(updateProduct);
+      alert("Delete Success!");
     } catch (error) {
-      alert("Delete Fail!")
+      alert("Delete Fail!");
     }
-  }
+  };
 
   return (
     <>
@@ -52,29 +52,33 @@ const Homepage = () => {
       <div className="product-list">
         {product.map((product, index) => {
           return (
-            <div className="product" key={index}>
+            <div className="product" id="product" key={index}>
               <div className="product-image">
-                <img
-                  src={product.image}
-                  alt="a product"
-                  width={250}
-                  height={250}
-                />
+                <img src={product.image} alt="a product" />
               </div>
               <div className="product-detail">
                 <h1>Product name: {product.name}</h1>
                 <h3>Produce price: {product.price}</h3>
                 <p>{product.description}</p>
                 <div className="product-action">
-                  <button onClick={() => navigate(`/products/view/${product.id}`)}>
+                  <button
+                    onClick={() => navigate(`/products/view/${product.id}`)}
+                  >
                     View
                   </button>
-                  <button onClick={() => navigate(`/products/edit/${product.id}`)}>
+                  <button
+                    onClick={() => navigate(`/products/edit/${product.id}`)}
+                  >
                     Edit
                   </button>
                 </div>
               </div>
-              <button className="delete" onClick={() => handleDelete(product.id)}>X</button>
+              <button
+                className="delete"
+                onClick={() => handleDelete(product.id)}
+              >
+                X
+              </button>
             </div>
           );
         })}

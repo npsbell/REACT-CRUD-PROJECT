@@ -19,10 +19,10 @@ const EditPostPage = ({ title }) => {
       setNameInput(response.data.data.name);
       setimgInput(response.data.data.image);
       setPriceInput(response.data.data.price);
-      setDescriptionInput(response.data.data.description); 
+      setDescriptionInput(response.data.data.description);
     } catch (error) {
-      console.log(error)
-      alert("Fail to fetch product data!")
+      console.log(error);
+      alert("Fail to fetch product data!");
     }
   };
 
@@ -42,7 +42,7 @@ const EditPostPage = ({ title }) => {
       navigate("/");
       alert("Edit Success!");
     } catch (error) {
-      console.log(error)
+      console.log(error);
       alert("Edit Fail!");
     }
   };
@@ -57,7 +57,7 @@ const EditPostPage = ({ title }) => {
       <Navbar title="Edit Product Page" />
 
       <div className="product-form" onSubmit={handleSubmit}>
-        <form className="input-container">
+        <form className="input-container" id="input-container">
           <h1>Edit Product Form : {nameInput}</h1>
           <label>
             {" "}

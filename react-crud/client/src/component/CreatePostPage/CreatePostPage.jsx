@@ -38,7 +38,7 @@ const CreatePostPage = ({ title }) => {
       <Navbar title="Create Product Page" />
 
       <div className="product-form" onSubmit={handleSubmit}>
-        <form className="input-container">
+        <form className="input-container" id="input-container">
           <h1>Create Product Form</h1>
           <label>
             {" "}
